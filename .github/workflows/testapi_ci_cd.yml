@@ -21,6 +21,9 @@ jobs:
       uses: actions/setup-python@v3
       with:
         python-version: ${{ matrix.python-version }}
+    - name: make a .env file
+      run: |
+        cp .envcopy .env
     - name: Install Dependencies
       run: |
         python -m pip install --upgrade pip
