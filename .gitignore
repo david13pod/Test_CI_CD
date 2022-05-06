@@ -1,0 +1,11 @@
+.env
+
+htmlcov
+
+.vscode
+
+Opinionated/.env
+
+Opinionated/htmlcov
+
+Opinionated/.vscode

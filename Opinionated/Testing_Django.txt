@@ -78,3 +78,9 @@ import os
 os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'Opinionated.settings')
 import django
 django.setup()
+
+or add this to .githubworkflows
+pytest --ds=Opinionate.settings
+
+add badges
+https://github.com/david13pod/Test_CI_CD/actions/workflows/testapi_ci_cd.yml/badge.svg
