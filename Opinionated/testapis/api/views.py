@@ -17,6 +17,8 @@ class StudentCreateAPIView(CreateAPIView):
     serializer_class = StudentSerializer
     model = Student
     queryset = Student.objects.all()
+    permission_classes = []
+    authentiication_classes = [] 
 
 class StudentDetailAPIView(RetrieveAPIView):
     serializer_class = StudentSerializer
@@ -27,6 +29,8 @@ class StudentDeleteAPIView(DestroyAPIView):
     serializer_class = StudentSerializer
     model = Student
     queryset = Student.objects.all()
+    permission_classes = []
+    authentiication_classes = [] 
 
 class ClassroomAPIView(APIView):
     serializer_class = ClassroomSerializer

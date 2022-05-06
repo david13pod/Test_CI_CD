@@ -71,3 +71,10 @@ it helps find the edge case e.g
 dir(response)
 
 pytest -k student_create looks for tests beginning with student_create
+
+add these commands to ur test files
+
+import os
+os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'Opinionated.settings')
+import django
+django.setup()

@@ -12,10 +12,15 @@ class TestStudentAPIViews(TestCase):
 
     def setUp(self):
         self.client =APIClient()
+
+        # from django.contrib.auth.models import User
         self.list_url = reverse('student_list_api')
         self.create_url = reverse('student_create_api')
         # self.detail_url = reverse('student_detail_api')
         # self.delete_url = reverse('student_delete_api')
+        # self.new_user  = User.objects.create_user(username="fantom", password="qwerty")
+        # self.client.force_login(self.new_user)
+
 
     def test_student_list_works(self):
         # create model
@@ -43,7 +48,7 @@ class TestStudentAPIViews(TestCase):
             "average_score": 100
         }
         response = self.client.post(self.create_url,input_data )
-        # print(response.data)
+        print(response,self.create_url)
 
         assert response.json != None
         assert response.status_code == 201
@@ -69,11 +74,11 @@ class TestStudentAPIViews(TestCase):
         delete_url1 = reverse('student_delete_api', kwargs={"pk": student1.id})
         
         response = self.client.delete(delete_url1)
-        # print('data',response)
+        print('data',response.data)
 
         # assert response.json == None
-        assert response.status_code == 204
         assert Student.objects.count() == 0
+        assert response.status_code == 204
 
 
 
