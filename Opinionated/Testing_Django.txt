@@ -84,3 +84,7 @@ pytest --ds=Opinionate.settings
 
 add badges
 https://github.com/david13pod/Test_CI_CD/actions/workflows/testapi_ci_cd.yml/badge.svg
+
+pytest sugar: for nice results dispplay
+pytest-xdist  run multiple tests in parallel.... pytest -n 4
+pytest black: for formating the documeents pytest --black
