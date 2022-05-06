@@ -1,0 +1,73 @@
+Reasons for tes
+makes for easy refactoring: changing the code without changing the behaviour
+high app quality
+easy version upgrade
+
+
+Unit test:
+Tests each piece independently of the others
+Fast
+
+Integration Test
+Test multiple pieces together to ensure they work well with each other
+
+Functional Tests
+slowest
+test from the end users pov
+using selelium
+
+django looks for files and classes starting with test
+include __init__.py file in the test folder
+SimpleTestCase can be used when not interacting with dB
+
+manage.py test appname
+
+
+The resolve() function can be used for resolving URL paths to the corresponding view functions
+The reverse function allows to retrieve url details from url's.py file through the name value provided there
+
+setup function:
+it would be ran before order methods
+def setUp(self):
+
+
+functional testing with selelium
+check last vid
+
+
+using comnetdj0 env
+
+decouple: to protect ur pwords and others
+pip install python-decouple
+
+mixer: to generate values for test
+pip install mixer
+from mixer.backend.django import mixer
+mixer.blend(modelname)
+
+
+pytest:
+
+pros: use only assert, intuitive,plugins, coverage, integration with ide
+, isolated test, parallel testn, integration withci/cd github, runs with normal unit tes
+
+pip install pytest, pytest-django
+pytest to run
+create pytest.ini file and make pytest the settings there
+
+code coverage
+pip install pytest-cov
+pytest --cov=. --cov-report=html #cov checks all file and returns html report
+create .coveragerc file to omit unnecessary files
+
+Hypothesis
+pip install hypothesis
+import given, settings, strategies
+from hypothesis.extra.django import TestCase ##from normal django testcases
+
+it helps find the edge case e.g
+@given(st.floats(min_value=0, max_value=39.99)) # a decorator
+
+dir(response)
+
+pytest -k student_create looks for tests beginning with student_create

@@ -1,0 +1,3 @@
+# Test decouple
+
+dbEngine =  'django.db.backends.sqlite3'
