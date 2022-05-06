@@ -1,4 +1,10 @@
 # from django.test import TestCase
+import os
+
+os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'Opinionated.settings')
+import django
+django.setup()
+
 from .models import Student, Classroom
 import pytest
 from mixer.backend.django import mixer

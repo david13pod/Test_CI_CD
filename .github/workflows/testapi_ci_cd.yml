@@ -30,4 +30,4 @@ jobs:
         pip install -r Opinionated/requirements.txt
     - name: Run Tests
       run: |
-        pytest
+        pytest Opinionated/testapis
