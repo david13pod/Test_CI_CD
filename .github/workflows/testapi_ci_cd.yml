@@ -30,9 +30,4 @@ jobs:
         pip install -r Opinionated/requirements.txt
     - name: Run Tests
       run: |
-        import os
-        os.environ.setdefault("DJANGO_SETTINGS_MODULE", "Opinionated.settings")
-
-        import django
-        django.setup()
         pytest
